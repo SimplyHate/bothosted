@@ -1,8 +1,13 @@
-const =; Discord =  register('discord.js');
-const =; client = new Discord.client();
+const Discord = require('discord.js')
+const client = new Discord.Client()
 
-client.login("NjYyNTI0OTgxNzI0NDQ2NzU2.XiO7Kg.1kIodXdmPx0Z1iYlikB8kNuJmQk");
+client.on('ready', () => {
+    console.log("Connected as " + client.user.tag)
+})
 
-client.on("ready" , () => {
-    console.log("The bot is online!");
-};]
+// Get your bot's secret token from:
+// https://discordapp.com/developers/applications/
+// Click on your application -> Bot -> Token -> "Click to Reveal Token"
+bot_secret_token = "NjYyNTI0OTgxNzI0NDQ2NzU2.XiR1CA.qWdhMajSc565-uwe-HeY77VJUd8"
+
+client.login(bot_secret_token)
